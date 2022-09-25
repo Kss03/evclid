@@ -96,6 +96,47 @@ h1, h2, h3, p {
   line-height: 22px;
 }
 
+.header__nav .nav__link {
+  position: relative;
+}
+
+.header__nav .nav__link:focus {
+  outline: 2px solid #FF9900;
+  outline-offset: 4px;
+  transition: outline 0.2s ease-in-out 0s;
+}
+
+.header__nav .nav__link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #FF9900;
+  bottom: -5px;
+  left: 0;
+  opacity: 0;
+}
+
+.header__nav .nav__link:hover {
+  outline: none;
+  transition: outline 0.2s ease-in-out 0s;
+}
+
+.header__nav .nav__link:hover::after {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out 0s;
+}
+
+.header__nav .nav__link:active {
+  color: #E1670E;
+  transition: color 0.2s ease-in-out 0s;
+}
+
+.header__nav .nav__link:active::after {
+  background-color: #E1670E;
+  transition: background-color 0.2s ease-in-out 0s;
+}
+
 .header__nav .nav__item:not(:last-child) {
   margin-right: 85px;
 }
@@ -103,6 +144,38 @@ h1, h2, h3, p {
 .header__search {
   padding-top: 3px;
   padding-left: 1px;
+}
+
+
+.header__search-btn:focus {
+  outline: 2px solid #FF9900;
+  outline-offset: 4px;
+  transition: outline 0.2s ease-in-out 0s;
+}
+
+.header__search-btn:hover {
+  outline: none;
+  transition: outline 0.2s ease-in-out 0s;
+}
+
+.header__search-btn:hover path {
+  stroke: #FF9900;
+  transition: stroke 0.2s ease-in-out 0s;
+}
+
+.header__search-btn:hover rect {
+  fill: #ff9900;
+  transition: fill 0.2s ease-in-out 0s;
+}
+
+.header__search-btn:active path {
+  stroke: #FF9900;
+  transition: stroke 0.2s ease-in-out 0s;
+}
+
+.header__search-btn:active rect {
+  fill: #ff9900;
+  transition: fill 0.2s ease-in-out 0s;
 }
 
 /* hero */
@@ -148,6 +221,19 @@ h1, h2, h3, p {
   color: #FFFFFF;
   background-color: #FF9900;
   border-radius: 16px;
+  transition: background-color 0.1s ease-in-out 0s;
+}
+
+.hero__button:focus {
+  background-color: #FFB84D;
+}
+
+.hero__button:hover {
+  background-color: #FFB84D;
+}
+
+.hero__button:active {
+  background-color: #E1670E;
 }
 
 /* about-us */
@@ -203,6 +289,22 @@ h1, h2, h3, p {
   line-height: 20px;
   text-align: center;
   color: #FFFFFF;
+  transition: background-color 0.2s ease-in-out 0s, border-color 0.2s ease-in-out 0s;
+}
+
+.about-us__left .left__button:focus {
+  background-color: #FF9900;
+  border-color: #FF9900;
+}
+
+.about-us__left .left__button:hover {
+  background-color: #FF9900;
+  border-color: #FF9900;
+}
+
+.about-us__left .left__button:active {
+  background-color: #E1670E;
+  border-color: #E1670E;
 }
 
 .about-us__right {
@@ -267,6 +369,25 @@ h1, h2, h3, p {
   line-height: 22px;
 }
 
+.work-descr__step-btn {
+  transition: color 0.2s ease-in-out 0s, outline 0.2s ease-in-out 0s;
+}
+
+.work-descr__step-btn:focus {
+  outline: 2px solid #ff9900;
+  outline-offset: 4px;
+}
+
+.work-descr__step-btn:hover {
+  outline: none;
+  color: #FF9900;
+}
+
+.work-descr__step-btn:active {
+  outline: none;
+  color: #E1670E;
+}
+
 .work-descr__item:not(:last-child) {
   margin-right: 86px;
 }
@@ -315,6 +436,19 @@ h1, h2, h3, p {
   color: #FFFFFF;
   background: #FF9900;
   border-radius: 16px;
+  transition: border-color 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s;
+}
+
+.work-descr__button1:focus {
+  background-color: #FFB84D;
+}
+
+.work-descr__button1:hover {
+  background-color: #FFB84D;
+}
+
+.work-descr__button1:active {
+  background-color: #E1670E;
 }
 
 .work-descr__button2 {
@@ -326,27 +460,146 @@ h1, h2, h3, p {
   color: #000000;
   border: 1px solid #000000;
   border-radius: 16px;
+  transition: color 0.2s ease-in-out 0s, border-color 0.2s ease-in-out 0s, background-color 0.2s ease-in-out 0s;
+}
+
+.work-descr__button2:focus {
+  background-color: #666666;
+  color: #ffffff;
+  border-color: #666666;
+}
+
+.work-descr__button2:hover {
+  background-color: #666666;
+  color: #ffffff;
+  border-color: #666666;
+}
+
+.work-descr__button2:active {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
 }
 
 /* questions */
 
-.question__container {
+.questions__container {
   padding-top: 11px;
 }
 
 .questions__title {
-  padding-bottom: 32px;
+  padding-bottom: 33px;
   margin: 0;
-  border-bottom: 1px solid #CACACA;
+
 }
 
 .questions__accordions-item {
-  display: block;
-  padding: 39px 0;
+  display: flex;
+  align-items: center;
+}
+
+.questions__accordions-btn {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 31px 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
-  border-bottom: 1px solid #CACACA;
+  transition: color 0.2s ease-in-out 0s;
+}
+
+.questions__accordions-btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #CACACA;
+  top: 0;
+  left: 0;
+  transition: background-color 0.2s ease-in-out 0s;
+}
+
+.questions__accordions-btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #CACACA;
+  bottom: -1px;
+  left: 0;
+  transition: background-color 0.2s ease-in-out 0s;
+}
+
+.questions__accordions-btn:focus {
+  color: #FF9900;
+}
+
+.questions__accordions-btn ellipse, .questions__accordions-btn path {
+  transition: fill 0.2s ease-in-out 0s;
+}
+
+.questions__accordions-btn:focus ellipse {
+  fill: #FF9900;
+}
+
+.questions__accordions-btn:focus path {
+  fill: #ffffff;
+}
+
+.questions__accordions-btn:focus::before ,.questions__accordions-btn:focus::after {
+  z-index: 10;
+  background-color: #FF9900;
+}
+
+.questions__accordions-btn:hover {
+  color: #FF9900;
+}
+
+
+.questions__accordions-btn:hover::before ,.questions__accordions-btn:hover::after {
+  z-index: 10;
+  background-color: #FF9900;
+}
+
+.questions__accordions-btn:hover ellipse {
+  fill: #FF9900;
+}
+
+.questions__accordions-btn:hover path {
+  fill: #ffffff;
+}
+
+
+
+
+.questions__accordions-btn:active {
+  color: #000000;
+}
+
+
+.questions__accordions-btn:active::before ,.questions__accordions-btn:active::after {
+  z-index: 10;
+  background-color: #CACACA;
+}
+
+.questions__accordions-btn:active .questions__cross {
+  transform: rotate(45deg);
+}
+
+.questions__accordions-btn:active ellipse {
+  fill: #CACACA;
+}
+
+.questions__accordions-btn:active path {
+  fill: black;
+}
+
+
+
+.questions__acordions-text {
+  margin-right: auto;
 }
 
 /* footer */
@@ -385,12 +638,58 @@ footer {
   color: #CACACA;
 }
 
+.footer__left .left__nav-link {
+  transition: color 0.2s ease-in-out 0s, outline 0.2s ease-in-out 0s;
+}
+
+.footer__left .left__nav-link:focus {
+  outline: 2px solid #FF9900;
+  outline-offset: 4px;
+}
+
+.footer__left .left__nav-link:hover {
+  color: #FF9900;
+  outline: none;
+}
+
+.footer__left .left__nav-link:active {
+  color: #E1670E;
+  outline: none;
+}
+
 .footer__left .left__soc-list {
   display: flex;
 }
 
-.left__soc-item:not(:last-child) {
+.footer__left .left__soc-item:not(:last-child) {
   margin-right: 25px;
+}
+
+.footer__left .left__soc-link, .footer__left .left__soc-link path {
+  transition: fill 0.2s ease-in-out 0s, outline 0.2s ease-in-out 0s;
+}
+
+.footer__left .left__soc-link:focus {
+  outline: 2px solid #FF9900;
+  outline-offset: 4px;
+}
+
+.footer__left .left__soc-link:hover {
+  outline: none;
+}
+
+.footer__left .left__soc-link:hover path {
+  outline: none;
+  fill: #FF9900;
+}
+
+.footer__left .left__soc-link:active {
+  outline: none;
+}
+
+.footer__left .left__soc-link:active path {
+  outline: none;
+  fill: #E1670E;
 }
 
 
@@ -422,7 +721,6 @@ footer {
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
-  color: #CACACA;
 }
 
 .footer__form .form__comment {
@@ -436,8 +734,26 @@ footer {
   font-size: 16px;
   line-height: 32px;
   resize: none;
-  color: #CACACA;
 }
+
+.footer__form .form__input, .footer__form .form__comment {
+  color: #ffffff;
+  outline: none;
+  transition: background-color 0.2s ease-in-out 0s;
+}
+
+.footer__form .form__input:focus, .footer__form .form__comment:focus {
+  background-color: #666666;
+}
+
+.footer__form .form__input:hover, .footer__form .form__comment:hover {
+  background-color: #666666;
+}
+
+.footer__form .form__input:active, .footer__form .form__comment:active {
+  background-color: #666666;
+}
+
 
 .footer__form .form__button {
   width: 269px;
@@ -449,6 +765,19 @@ footer {
   font-size: 16px;
   line-height: 20px;
   color: #FFFFFF;
+  transition: background-color 0.2s ease-in-out 0s;
+}
+
+.footer__form .form__button:focus {
+  background-color: #FFB84D;
+}
+
+.footer__form .form__button:hover {
+  background-color: #FFB84D;
+}
+
+.footer__form .form__button:active {
+  background-color: #E1670E;
 }
 
 .footer__form .form__label {
