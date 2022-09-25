@@ -754,6 +754,10 @@ footer {
   background-color: #666666;
 }
 
+.form__bottom {
+  display: flex;
+  align-items: center;
+}
 
 .footer__form .form__button {
   width: 269px;
