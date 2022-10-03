@@ -542,7 +542,7 @@
 
 .about-us__left {
   position: relative;
-  min-height: 400px;
+  min-height: auto;
   border-radius: 16px;
   background: none;
 }
@@ -557,11 +557,11 @@
   align-items: flex-start;
 }
 
-.about-us__left .left__content::after {
+.about-us__left .left__content::before {
   content: '';
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
-  height: calc(100% / 2);
+  height: 50vw;
   top: 0;
   background-image: url(../img/about-us-back-1.jpg);
   background-size: cover;
