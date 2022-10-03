@@ -313,7 +313,7 @@ h1, h2, h3, p {
 }
 
 .about-us__left .left__content {
-  height: 35%;
+  /* height: 35%; */
   width: 100%;
   display: flex;
   align-items: center;
