@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
   <title>Евклид</title>
@@ -52,7 +53,7 @@
         </ul>
       </nav>
       <div class="header__search">
-        <button class="btn-reset header__search-btn">
+        <button class="btn-reset header__search-btn form-inactive">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="black"/>
             <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="black" stroke-width="2"/>
@@ -60,19 +61,50 @@
         </button>
       </div>
     </div>
+    <form action="https://jsonplaceholder.typicode.com/posts" class="header__form form">
+      <input type="text" class="form__input" name="search" placeholder="Что будем искать?">
+      <button class="btn-reset header__search-btn form__search-btn" type="submit">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="black"/>
+          <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="black" stroke-width="2"/>
+        </svg>
+      </button>
+      <button class="btn-reset form__search-close" type="button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8.95386" y="7.30444" width="11.6645" height="2.33291" transform="rotate(45 8.95386 7.30444)" fill="#CACACA"/>
+          <rect x="7.3042" y="15.5525" width="11.6645" height="2.33291" transform="rotate(-45 7.3042 15.5525)" fill="#CACACA"/>
+          <circle cx="12" cy="12" r="11" stroke="#CACACA" stroke-width="2"/>
+        </svg>              
+      </button>
+    </form>
   </header>
   <main class="main">
     <section class="section hero">
-      <div class="container hero__container">
-        <h2 class="hero__title">
-          Проектные решения любой сложности
-        </h2>
-        <p class="hero__descr">
-          Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей день остаются уделом проектантов
-        </p>
-        <button class="btn-reset btn hero__button">
-          Заказать расчёт
-        </button>
+      <div class="container hero__container swiper">
+        <div class="hero__content">
+          <h2 class="hero__title">
+            Проектные решения любой сложности
+          </h2>
+          <p class="hero__descr">
+            Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей день остаются уделом проектантов
+          </p>
+          <button class="btn-reset btn hero__button">
+            Заказать расчёт
+          </button>
+        </div>
+
+        <div class="swiper-wrapper hero__swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide hero__swiper-slide hero__swiper-slide-1"></div>
+          <div class="swiper-slide hero__swiper-slide hero__swiper-slide-2"></div>
+          <div class="swiper-slide hero__swiper-slide hero__swiper-slide-3"></div>
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination hero__swiper-pagination"></div>
+
       </div>
     </section>
 
@@ -323,5 +355,8 @@
 
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
