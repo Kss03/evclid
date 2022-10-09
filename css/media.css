@@ -609,7 +609,8 @@
   .header__nav {
     padding-top: 80px;
     padding-left: 15px;
-    width: 100%;
+    width: 320px;
+    max-width: 100%;
     min-width: 0;
   }
 
