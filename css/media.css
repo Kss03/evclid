@@ -193,7 +193,6 @@
   }
 
   .work-descr__content {
-    display: flex;
     align-items: stretch;
     justify-content: space-between;
   }
@@ -209,9 +208,24 @@
     height: 689px;
     padding-top: 0;
     border-radius: 32px;
-    background-image: url(../img/work-descr-img-1024-1.png);
     background-size: cover;
     background-position: center;
+  }
+
+  .content-1 .content__image {
+    background-image: url('../img/work-descr/work-descr-img-1024-1.png');
+  }
+  
+  .content-2 .content__image {
+    background-image: url('../img/work-descr/work-descr-img-1024-2.png');
+  }
+  
+  .content-3 .content__image {
+    background-image: url('../img/work-descr/work-descr-img-1024-3.png');
+  }
+  
+  .content-4 .content__image {
+    background-image: url('../img/work-descr/work-descr-img-1024-4.png');
   }
 
   .work-descr__button1 {
@@ -230,12 +244,12 @@
 /* questions */
 
   .questions__accordions-btn {
-    padding: 30px 0;
+    padding: 30px 0 !important;
     font-weight: 700;
-    font-size: 1.25rem;
-    line-height: 160%;
+    font-size: 1.25rem !important;
+    line-height: 160% !important;
     text-align: start;
-    transition: color 0.2s ease-in-out 0s;
+    transition: color 0.3s ease-in-out 0s;
   }
 
   .questions__accordions-btn .questions__cross {
@@ -420,7 +434,22 @@
     height: 284px;
     margin-bottom: 38px;
     border-radius: 24px;
-    background-image: url(../img/work-descr-img-768-1.jpg);
+  }
+
+  .content-1 .content__image {
+    background-image: url('../img/work-descr/work-descr-img-768-1.jpg');
+  }
+  
+  .content-2 .content__image {
+    background-image: url('../img/work-descr/work-descr-img-768-2.jpg');
+  }
+  
+  .content-3 .content__image {
+    background-image: url('../img/work-descr/work-descr-img-768-3.jpg');
+  }
+  
+  .content-4 .content__image {
+    background-image: url('../img/work-descr/work-descr-img-768-4.jpg');
   }
 
   .work-descr__content .content__item {

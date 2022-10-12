@@ -24,6 +24,14 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
+//accordion
+
+$( function() {
+  $( "#accordion" ).accordion({
+    heightStyle: "content"
+  });
+} );
+
 
 // burger
 
@@ -65,3 +73,27 @@ searchClose.addEventListener('click', function() {
   form.classList.remove('header__form--active');
   searchImg.classList.remove('header__search-btn--hidden');
 })
+
+//work-descr tabs
+
+document.querySelectorAll('.work-descr__step-btn').forEach(function(btn) {
+
+  btn.addEventListener('click', function(dat) {
+    let datTag = dat.currentTarget.dataset.path;
+
+    document.querySelectorAll('.work-descr__step-btn').forEach(function(rem) {
+      rem.classList.remove('step-btn--active');
+    });
+
+    btn.classList.add('step-btn--active');
+
+    document.querySelectorAll('.work-descr__content').forEach(function(cont) {
+      cont.classList.remove('content--active');
+    });
+    
+    document.querySelector(`[data-target="${datTag}"]`).classList.add('content--active');
+
+  });
+});
+
+
