@@ -753,6 +753,10 @@ h1, h2, h3, p {
   transition: transform 0.3s ease-in-out 0s;
 }
 
+.ui-accordion .ui-accordion-header-active .questions__cross {
+  transform: rotate(45deg);
+}
+
 .questions__accordions-btn:focus {
   color: #FF9900;
 }
